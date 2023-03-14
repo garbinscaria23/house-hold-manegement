@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   
+  </style>
+	<title> Home Page</title>
+	<!-- Link to Bootstrap CSS -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white fw-bold" href="#">MY HOME</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section2">About</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link " href="#section1">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/login">Login</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="text" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+            <img src=" {% static './images/2.jpg' %} "  class="d-block w-100" alt="HOME" width="50" height="500">
+<br>
+<br>
+<div style="color: rgb(218, 17, 134);">
+<h1 align="center" ><b>HIGHLIGHTS</b></h1>
+<hr>
+</div>
+<div class="container" >
+    <div class="row">
+      {% for i in u %}
+      <div class="col-3" style="padding-top: 20px;"><div class="card text-center border-2 border-warning"  style="width: 300px;height: auto;">
+        <div class="card-body">
+          <img src="{{ i.image.url }}" height="100" width="200">
+
+                <h2 class="card-tittle">{{i.f_name}}</h2>
+                <p class="card-text">
+                    
+                    <h4 class="text-danger">{{i.phone}}</h4>
+                </p>
+                <button class="btn btn-primary">VIEW</button>
+        </div>
+    </div></div>
+    
+    
+        
+
+        
+        {% endfor %}
+   
+  
+    </div>
+
+</div>
+<br>
+<br>
+<div style="color: aliceblue;background-color: black;"><h1 align="center">ABOUT</h1>
+<section id="section2">
+  <hr>
+<br>
+<br>
+<p align="center">Welcome 
+
+  We understand that keeping a household organized and running smoothly can be a challenging task. That's why we've created a comprehensive system to help you manage your home with ease. Our platform provides a centralized location for all of your household information, making it easy to keep track of everything from grocery lists to cleaning schedules.
+  
+  With our user-friendly interface, you can create personalized profiles for each member of your household, assign tasks and responsibilities, and set reminders for important deadlines. Our platform also allows you to track your expenses, manage your budget, and even plan your meals.
+  
+  Our goal is to help you streamline your household management so that you can spend more time doing the things you love with the people you love. We believe that a well-organized home can lead to a happier and more fulfilling life, and we're here to help you achieve just that.
+  
+  Thank you for choosing our household management project. We're excited to help you simplify your life and create a more harmonious home.</p>
+</section>
+  <br>
+  <br>
+  <br>
+</div>
+<div style="color: aliceblue;background-color: black;">
+  <section id="section1">
+  <h1 align="center">CONTACT</h1>
+  <hr>
+<br>
+<br>
+<p align="center">EMAIL:garbinscaria@gmail.com</p>
+<p align="center">PHONE:8921206910</p>
+<footer class="main-footer">
+  <h3  align="center"><b>Copyright &copy; 2023 GARBIN SCARIA.</b></h3> All rights
+  reserved.
+</footer>
+
+</section></div>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://www.youtube.com/">Youtube
+      <img src=" {% static './images/ytube.png' %} "
+    </a>
+    <a class="navbar-brand" href="https://www.facebook.com/">Facebook
+      <img src=" {% static './images/f.png' %} "
+    </a>
+    <a class="navbar-brand" href="https://web.whatsapp.com/">Whatsapp
+      <img src=" {% static './images/w.png' %} "
+    </a>
+    <a class="navbar-brand" href="https://www.instagram.com/">Instagram
+      <img src=" {% static './images/i.png' %} "
+    </a>
+  </div>
+</nav>
+
+
+
+	<!-- Link to Bootstrap JS and jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+  <script src="/js/bootstrap.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
