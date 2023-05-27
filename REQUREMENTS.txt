@@ -1,0 +1,12 @@
+HOUSEHOLD MANEGEMENT SYSTEM 
+
+
+1.CRUD operations 
+2.create profile of users 
+3. create profile of employee
+4.select employees by users
+5. select users by employee
+6.prepare tenders by employee and send to users
+7.view tenders by the users
+9.admin dashboard to delete services 
+10.give feedback to the admin by users
